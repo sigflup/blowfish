@@ -1,0 +1,380 @@
+Archive member included because of file (symbol)
+
+../libmega/libmega.a(udivsi3.o)
+                              stdlib.o (__udivsi3)
+../libmega/libmega.a(mulsi3.o)
+                              main.o (__mulsi3)
+../libmega/libmega.a(modsi3.o)
+                              main.o (__modsi3)
+../libmega/libmega.a(lib.o)   main.o (last_inc)
+../libmega/libmega.a(bottom.o)
+                              sega.o (v_hook)
+../libmega/libmega.a(table.o)
+                              main.o (cos_tab)
+../libmega/libmega.a(divsi3.o)
+                              ../libmega/libmega.a(modsi3.o) (__divsi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+wvgm_fm             0x1               main.o
+len_sfx             0x4               main.o
+z80_mutex           0x4               main.o
+snake               0x10              main.o
+vis_pending         0x4               main.o
+pending_draw        0x4               main.o
+pause               0x4               main.o
+rad_clk             0x4               main.o
+rotate_colors_values
+                    0x60              main.o
+lwvgm_stop          0x4               main.o
+fb_p                0x4               main.o
+fb_mutex            0x4               main.o
+bank_sfx            0x4               main.o
+address             0x4               ../libmega/libmega.a(lib.o)
+addr_z80            0x4               main.o
+bank_fm             0x4               main.o
+sprite_ram_orig     0x500             main.o
+last_inc            0x4               ../libmega/libmega.a(lib.o)
+sprite_counter      0x2               ../libmega/libmega.a(lib.o)
+fade_to             0x4               main.o
+vs_x                0x4               main.o
+bank_dac            0x4               main.o
+raster_clk          0x4               main.o
+dma_majic2          0xa               ../libmega/libmega.a(lib.o)
+ctrl                0x1               main.o
+addr_sfx            0x4               main.o
+scroll_msg_len      0x4               main.o
+line_count          0x4               main.o
+wvgm_dac_addr       0x4               main.o
+lwaggle             0x4               main.o
+ctrl2               0x1               ../libmega/libmega.a(bottom.o)
+address2            0x4               ../libmega/libmega.a(lib.o)
+first_sprite        0x24              sprites.o
+fb                  0x2000            main.o
+show_palette        0x4               main.o
+bank_psg            0x4               main.o
+address232          0x4               ../libmega/libmega.a(lib.o)
+go                  0x4               ../libmega/libmega.a(lib.o)
+b_track_change      0x4               main.o
+globl_counter       0x4               ../libmega/libmega.a(lib.o)
+address32           0x4               ../libmega/libmega.a(lib.o)
+vis_draw_to         0x4               main.o
+wvgm_stop           0x1               main.o
+bubbles             0x18              main.o
+ext_hook            0x4               ../libmega/libmega.a(bottom.o)
+wvgm_dac            0x1               main.o
+fish_speed          0x4               main.o
+prev_sprite         0x24              sprites.o
+rnd_y               0x2               ../libmega/libmega.a(lib.o)
+v_hook              0x4               ../libmega/libmega.a(bottom.o)
+current_track       0x4               main.o
+ctrl1               0x1               ../libmega/libmega.a(bottom.o)
+play_z80            0x4               main.o
+hscroll_buf         0x380             main.o
+vs_y                0x4               main.o
+logo_y              0x4               main.o
+bubble_seed         0x4               main.o
+flip                0x4               main.o
+init_z80            0x4               main.o
+draw_to             0x4               main.o
+heap_pointer        0x4               ../libmega/libmega.a(lib.o)
+rnd_z               0x2               ../libmega/libmega.a(lib.o)
+sfx_play            0x4               main.o
+lctrl               0x1               main.o
+h_hook              0x4               ../libmega/libmega.a(bottom.o)
+wvgm_psg_addr       0x4               main.o
+bank_clk            0x4               main.o
+wvgm_fm_addr        0x4               main.o
+page                0x4               sprites.o
+dma_majic           0xa               ../libmega/libmega.a(lib.o)
+pal                 0x4               main.o
+heap_perm           0x4               ../libmega/libmega.a(lib.o)
+sprite_mutex        0x4               main.o
+brightness          0x4               main.o
+real_waggle         0x4               main.o
+current_pal         0x4               pal.o
+wvgm_psg            0x1               main.o
+logo_x              0x4               main.o
+waggle_clk          0x4               main.o
+rnd_x               0x2               ../libmega/libmega.a(lib.o)
+debug_text          0x4               ../libmega/libmega.a(lib.o)
+wvgm_stop_addr      0x4               main.o
+waggle              0x4               main.o
+sprite_index        0x4               sprites.o
+message_buffer      0x20              ../libmega/libmega.a(lib.o)
+sprite_ram          0x500             sprites.o
+rnd_v               0x2               ../libmega/libmega.a(lib.o)
+lflip               0x4               main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD sega.o
+LOAD main.o
+LOAD pal.o
+LOAD sprites.o
+LOAD z80_ctrl.o
+LOAD songs.o
+LOAD stdlib.o
+LOAD ../libmega/libmega.a
+
+.text           0x00000000   0x3e6664
+ *(.text)
+ .text          0x00000000      0x360 sega.o
+ .text          0x00000360     0x2eee main.o
+                0x0000038e                memcpy
+                0x00001b2a                vgm_stop
+                0x00000432                write_line
+                0x0000053c                write_line2
+                0x0000060e                change_track
+                0x00001c36                main
+                0x00001b72                vgm_load_song
+                0x00000626                draw_banks
+                0x00000360                rnd
+                0x00002596                jredd_bottom
+                0x00001b4e                vgm_start
+                0x000009fe                logic
+                0x000003b4                h_bottom
+ *fill*         0x0000324e        0x2 00
+ .text          0x00003250      0x122 pal.o
+                0x00003250                push_pal
+ *fill*         0x00003372        0x2 00
+ .text          0x00003374      0x480 sprites.o
+                0x00003382                reset_sprites
+                0x0000338a                put_sprite
+                0x00003374                clear_sprites
+                0x0000356e                put_sprite2
+ .text          0x000037f4      0x27e z80_ctrl.o
+                0x000038a6                YM2612_writeSafe
+                0x00003862                Z80_endReset
+                0x000039fa                Z80_init
+                0x0000380a                Z80_requestBus
+                0x00003852                Z80_startReset
+                0x000038d0                YM2612_reset
+                0x00003842                Z80_releaseBus
+                0x00003964                Z80_upload
+                0x00003872                Z80_setBank
+                0x000037f4                Z80_isBusTaken
+ *fill*         0x00003a72        0x2 00
+ .text          0x00003a74        0x0 songs.o
+ .text          0x00003a74      0x240 stdlib.o
+                0x00003a92                qsort
+                0x00003a74                strlen
+ .text          0x00003cb4       0x30 ../libmega/libmega.a(udivsi3.o)
+                0x00003cb4                __udivsi3
+ .text          0x00003ce4       0x22 ../libmega/libmega.a(mulsi3.o)
+                0x00003ce4                __mulsi3
+ *fill*         0x00003d06        0x2 00
+ .text          0x00003d08       0x2e ../libmega/libmega.a(modsi3.o)
+                0x00003d08                __modsi3
+ *fill*         0x00003d36        0x2 00
+ .text          0x00003d38      0xfcc ../libmega/libmega.a(lib.o)
+                0x00003e40                free_all
+                0x00004508                vram_write_rle
+                0x00004c80                poll_ctrl1
+                0x00004c0a                short_delay
+                0x00003e36                malloc
+                0x000043ec                z80_reset
+                0x0000438a                get_random
+                0x00003e54                do_dma
+                0x000048be                z80_write
+                0x00004624                ram_write_rle
+                0x00004434                z80_write_rle
+                0x00004158                do_dma2
+                0x000047fe                vram_write
+                0x00004350                seed
+                0x00004748                clearscreen
+                0x000046b2                cram_write
+                0x00003e2c                perm_malloc
+                0x00004a52                set_sprite
+                0x00003d38                blank_chips
+                0x00004cc2                poll_ctrl2
+                0x0000494c                move_sprite
+                0x00004c26                init_joy
+ .text          0x00004d04       0x28 ../libmega/libmega.a(bottom.o)
+                0x00004d24                no_routine
+                0x00004d04                std_ctrl
+ .text          0x00004d2c        0x0 ../libmega/libmega.a(table.o)
+ .text          0x00004d2c       0x2e ../libmega/libmega.a(divsi3.o)
+                0x00004d2c                __divsi3
+                0x00004d5c                . = ALIGN (0x4)
+ *fill*         0x00004d5a        0x2 00
+ *(.rodata)
+ .rodata        0x00004d5c     0xc6c8 main.o
+                0x00005bf8                vgm_drv_bin_len
+                0x0001135c                tracks
+                0x00005cbc                q_pat
+                0x00010a1c                blowfish2
+                0x0000c6bc                q_scroll
+                0x0000e6bc                font
+                0x0001021c                blowfish1
+                0x0001141b                title
+                0x0000ea9c                font2
+                0x0001141a                fish_speed_const
+                0x0000d6bc                q_scrollb
+                0x00011384                messages
+                0x00005bfc                color
+                0x0001121c                one
+                0x0001133c                small_one
+                0x0001131c                small_bubble
+                0x00004d5c                vgm_drv_bin
+                0x0001129c                bubble
+                0x0000ef9c                font3
+ .rodata        0x00011424       0x90 pal.o
+                0x00011424                rotate_colors
+ .rodata        0x000114b4   0x3d4db0 songs.o
+                0x000114b4                track1_vgm
+                0x00284eea                track4_vgm
+                0x00261da3                track3_vgm
+                0x0029a640                track5_vgm
+                0x0019ec8d                track2_vgm
+ .rodata        0x003e6264      0x400 ../libmega/libmega.a(table.o)
+                0x003e6264                cos_tab
+                0x003e6464                sin_tab
+
+.rodata.str1.1  0x003e6664      0x87b
+ .rodata.str1.1
+                0x003e6664      0x87b main.o
+                                0x87c (size before relaxing)
+
+.data           0x003e6ee0        0x4
+                0x003e6ee0                . = ALIGN (0x4)
+ *(.data)
+ .data          0x003e6ee0        0x0 sega.o
+ .data          0x003e6ee0        0x4 main.o
+                0x003e6ee0                scroll_msg
+ .data          0x003e6ee4        0x0 pal.o
+ .data          0x003e6ee4        0x0 sprites.o
+ .data          0x003e6ee4        0x0 z80_ctrl.o
+ .data          0x003e6ee4        0x0 songs.o
+ .data          0x003e6ee4        0x0 stdlib.o
+ .data          0x003e6ee4        0x0 ../libmega/libmega.a(udivsi3.o)
+ .data          0x003e6ee4        0x0 ../libmega/libmega.a(mulsi3.o)
+ .data          0x003e6ee4        0x0 ../libmega/libmega.a(modsi3.o)
+ .data          0x003e6ee4        0x0 ../libmega/libmega.a(lib.o)
+ .data          0x003e6ee4        0x0 ../libmega/libmega.a(bottom.o)
+ .data          0x003e6ee4        0x0 ../libmega/libmega.a(table.o)
+ .data          0x003e6ee4        0x0 ../libmega/libmega.a(divsi3.o)
+
+.bss            0x00ff0000     0x2f9a
+ *(.bss)
+ .bss           0x00ff0000        0x0 sega.o
+ .bss           0x00ff0000        0x0 main.o
+ .bss           0x00ff0000        0x0 pal.o
+ .bss           0x00ff0000        0x0 sprites.o
+ .bss           0x00ff0000        0x0 z80_ctrl.o
+ .bss           0x00ff0000        0x0 songs.o
+ .bss           0x00ff0000        0x0 stdlib.o
+ .bss           0x00ff0000        0x0 ../libmega/libmega.a(udivsi3.o)
+ .bss           0x00ff0000        0x0 ../libmega/libmega.a(mulsi3.o)
+ .bss           0x00ff0000        0x0 ../libmega/libmega.a(modsi3.o)
+ .bss           0x00ff0000        0x0 ../libmega/libmega.a(lib.o)
+ .bss           0x00ff0000        0x0 ../libmega/libmega.a(bottom.o)
+ .bss           0x00ff0000        0x0 ../libmega/libmega.a(table.o)
+ .bss           0x00ff0000        0x0 ../libmega/libmega.a(divsi3.o)
+ COMMON         0x00ff0000     0x29d0 main.o
+                0x00ff0000                wvgm_fm
+                0x00ff0002                len_sfx
+                0x00ff0006                z80_mutex
+                0x00ff000a                snake
+                0x00ff001a                vis_pending
+                0x00ff001e                pending_draw
+                0x00ff0022                pause
+                0x00ff0026                rad_clk
+                0x00ff002a                rotate_colors_values
+                0x00ff008a                lwvgm_stop
+                0x00ff008e                fb_p
+                0x00ff0092                fb_mutex
+                0x00ff0096                bank_sfx
+                0x00ff009a                addr_z80
+                0x00ff009e                bank_fm
+                0x00ff00a2                sprite_ram_orig
+                0x00ff05a2                fade_to
+                0x00ff05a6                vs_x
+                0x00ff05aa                bank_dac
+                0x00ff05ae                raster_clk
+                0x00ff05b2                ctrl
+                0x00ff05b4                addr_sfx
+                0x00ff05b8                scroll_msg_len
+                0x00ff05bc                line_count
+                0x00ff05c0                wvgm_dac_addr
+                0x00ff05c4                lwaggle
+                0x00ff05c8                fb
+                0x00ff25c8                show_palette
+                0x00ff25cc                bank_psg
+                0x00ff25d0                b_track_change
+                0x00ff25d4                vis_draw_to
+                0x00ff25d8                wvgm_stop
+                0x00ff25da                bubbles
+                0x00ff25f2                wvgm_dac
+                0x00ff25f4                fish_speed
+                0x00ff25f8                current_track
+                0x00ff25fc                play_z80
+                0x00ff2600                hscroll_buf
+                0x00ff2980                vs_y
+                0x00ff2984                logo_y
+                0x00ff2988                bubble_seed
+                0x00ff298c                flip
+                0x00ff2990                init_z80
+                0x00ff2994                draw_to
+                0x00ff2998                sfx_play
+                0x00ff299c                lctrl
+                0x00ff299e                wvgm_psg_addr
+                0x00ff29a2                bank_clk
+                0x00ff29a6                wvgm_fm_addr
+                0x00ff29aa                pal
+                0x00ff29ae                sprite_mutex
+                0x00ff29b2                brightness
+                0x00ff29b6                real_waggle
+                0x00ff29ba                wvgm_psg
+                0x00ff29bc                logo_x
+                0x00ff29c0                waggle_clk
+                0x00ff29c4                wvgm_stop_addr
+                0x00ff29c8                waggle
+                0x00ff29cc                lflip
+ COMMON         0x00ff29d0        0x4 pal.o
+                0x00ff29d0                current_pal
+ COMMON         0x00ff29d4      0x550 sprites.o
+                0x00ff29d4                first_sprite
+                0x00ff29f8                prev_sprite
+                0x00ff2a1c                page
+                0x00ff2a20                sprite_index
+                0x00ff2a24                sprite_ram
+ COMMON         0x00ff2f24       0x66 ../libmega/libmega.a(lib.o)
+                0x00ff2f24                address
+                0x00ff2f28                last_inc
+                0x00ff2f2c                sprite_counter
+                0x00ff2f2e                dma_majic2
+                0x00ff2f38                address2
+                0x00ff2f3c                address232
+                0x00ff2f40                go
+                0x00ff2f44                globl_counter
+                0x00ff2f48                address32
+                0x00ff2f4c                rnd_y
+                0x00ff2f4e                heap_pointer
+                0x00ff2f52                rnd_z
+                0x00ff2f54                dma_majic
+                0x00ff2f5e                heap_perm
+                0x00ff2f62                rnd_x
+                0x00ff2f64                debug_text
+                0x00ff2f68                message_buffer
+                0x00ff2f88                rnd_v
+ COMMON         0x00ff2f8a       0x10 ../libmega/libmega.a(bottom.o)
+                0x00ff2f8a                ctrl2
+                0x00ff2f8c                ext_hook
+                0x00ff2f90                v_hook
+                0x00ff2f94                ctrl1
+                0x00ff2f96                h_hook
+OUTPUT(rom. elf32-m68k)
+
+.comment        0x00000000       0x5a
+ .comment       0x00000000       0x12 main.o
+ .comment       0x00000012       0x12 pal.o
+ .comment       0x00000024       0x12 sprites.o
+ .comment       0x00000036       0x12 z80_ctrl.o
+ .comment       0x00000048       0x12 stdlib.o
